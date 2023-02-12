@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import Tasks from "./Tasks.vue";
+import Tasks from "@/components/Tasks.vue";
 import Draggable from "vuedraggable";
 
 export default defineComponent({
@@ -25,9 +25,7 @@ export default defineComponent({
       <Tasks status="inprogress" />
       <Tasks status="done" />
     </div>
-    <button
-      class="absolute right-6 bottom-12 w-12 h-12 rounded-full bg-gradient-to-r from-[#697EA4] to-[#88AFC3]"
-    >
+    <button class="absolute right-6 bottom-12 w-12 h-12 rounded-full bg-gradient-to-r from-[#697EA4] to-[#88AFC3]">
       <v-icon color="#fff"> mdi-plus </v-icon>
     </button>
   </div>

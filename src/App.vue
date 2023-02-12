@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Board from './components/Board.vue'
+import Board from '@/pages/Board.vue'
 
 export default defineComponent({
   name: 'App',
