@@ -1,17 +1,15 @@
-import { updateDraggedTask } from '@/helpers';
+import { updateDraggedTask } from "@/helpers";
 import { defineStore } from "pinia";
-
+import { useStorage } from "@vueuse/core";
 export const useBoardStore = defineStore("board-store", {
   state: () =>
-    ({
+    useStorage("board-state", {
       todo_tasks: [
         { text: "John", id: "id#1", order: 1, status: "todo" },
         { text: "Gerard", id: "id#3", order: 2, status: "todo" },
       ],
       backlog_tasks: [],
-      done_tasks: [
-        { text: "Joao Jr.", id: "id#4", order: 1, status: "done" },
-      ],
+      done_tasks: [{ text: "Joao Jr.", id: "id#4", order: 1, status: "done" }],
       inprogress_tasks: [
         { text: "Joao", id: "id#2", order: 1, status: "inprogress" },
       ],
